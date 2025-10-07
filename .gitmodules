@@ -1,0 +1,3 @@
+[submodule ".adventus"]
+	path = .adventus
+	url = https://github.com/pjd199/advent-of-code-input
