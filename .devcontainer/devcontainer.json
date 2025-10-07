@@ -14,6 +14,7 @@
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": {
 		"update pip": "python -m pip install --upgrade pip",
+		"pull input files" : "git submodule add https://github.com/pjd199/advent-of-code-input .adventus",
 		"install package": "pip install -e ."
 	},
 
