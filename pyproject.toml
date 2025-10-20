@@ -17,8 +17,3 @@ Repository = "https://github.com/pjd199/adventofcode"
 [build-system]
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
-
-[tools.adventus]
-cache-puzzle = true
-cache-answers = true
-cache-input = true
