@@ -6,6 +6,7 @@ https://adventofcode.com/2015/day/5
 """
 
 from re import findall
+
 from adventus import Puzzle
 
 

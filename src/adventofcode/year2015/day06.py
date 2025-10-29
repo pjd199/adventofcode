@@ -5,9 +5,9 @@ Day 6: Probably a Fire Hazard
 https://adventofcode.com/2015/day/6
 """
 
-import numpy as np
 from re import findall
 
+import numpy as np
 from adventus import Puzzle
 
 
