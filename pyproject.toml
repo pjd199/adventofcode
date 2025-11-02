@@ -21,3 +21,6 @@ build-backend = "setuptools.build_meta"
 [tool.ruff]
 extend-select = ["I"]
 fix = true
+
+[tool.adventus]
+cache = ".adventus"
