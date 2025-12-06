@@ -24,15 +24,19 @@ def solve() -> None:
         cities |= {a, b}
 
     # solve part one
-    puzzle.answer_one = min(
-        sum(routes[x] for x in pairwise(path))
-        for path in permutations(cities, len(cities))
+    puzzle.submit_answer_one(
+        min(
+            sum(routes[x] for x in pairwise(path))
+            for path in permutations(cities, len(cities))
+        )
     )
 
     # solve part two
-    puzzle.answer_two = max(
-        sum(routes[x] for x in pairwise(path))
-        for path in permutations(cities, len(cities))
+    puzzle.submit_answer_two(
+        max(
+            sum(routes[x] for x in pairwise(path))
+            for path in permutations(cities, len(cities))
+        )
     )
 
 

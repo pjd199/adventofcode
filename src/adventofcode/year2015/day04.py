@@ -25,10 +25,10 @@ def solve() -> None:
     puzzle = Puzzle(4, 2015)
 
     # solve part one
-    puzzle.answer_one = search(puzzle.input, 5)
+    puzzle.submit_answer_one(search(puzzle.input, 5))
 
     # solve part two
-    puzzle.answer_two = search(puzzle.input, 6)
+    puzzle.submit_answer_two(search(puzzle.input, 6))
 
 
 if __name__ == "__main__":

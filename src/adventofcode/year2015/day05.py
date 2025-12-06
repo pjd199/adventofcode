@@ -16,19 +16,23 @@ def solve() -> None:
     puzzle = Puzzle(5, 2015)
 
     # solve part one
-    puzzle.answer_one = sum(
-        1
-        for line in puzzle.input.splitlines()
-        if (len(findall(r"[aeiou]", line)) >= 3)
-        and len(findall(r"([a-z])\1", line)) >= 1
-        and len(findall(r"(ab|cd|pq|xy)", line)) == 0
+    puzzle.submit_answer_one(
+        sum(
+            1
+            for line in puzzle.input.splitlines()
+            if (len(findall(r"[aeiou]", line)) >= 3)
+            and len(findall(r"([a-z])\1", line)) >= 1
+            and len(findall(r"(ab|cd|pq|xy)", line)) == 0
+        )
     )
 
     # solve part two
-    puzzle.answer_two = sum(
-        1
-        for line in puzzle.input.splitlines()
-        if findall(r"([a-z]{2}).*\1", line) and findall(r"([a-z]).\1", line)
+    puzzle.submit_answer_two(
+        sum(
+            1
+            for line in puzzle.input.splitlines()
+            if findall(r"([a-z]{2}).*\1", line) and findall(r"([a-z]).\1", line)
+        )
     )
 
 

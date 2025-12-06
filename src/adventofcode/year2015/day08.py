@@ -16,14 +16,16 @@ def solve() -> None:
     puzzle = Puzzle(8, 2015)
 
     # solve part one
-    puzzle.answer_one = sum(
-        len(x) - len(findall(r"\\x[0-9a-f]{2}|\\\"|\\\\|.", x[1:-1]))
-        for x in puzzle.input.splitlines()
+    puzzle.submit_answer_one(
+        sum(
+            len(x) - len(findall(r"\\x[0-9a-f]{2}|\\\"|\\\\|.", x[1:-1]))
+            for x in puzzle.input.splitlines()
+        )
     )
 
     # solve part two
-    puzzle.answer_two = sum(
-        len(findall(r"\\|\"", x)) + 2 for x in puzzle.input.splitlines()
+    puzzle.submit_answer_two(
+        sum(len(findall(r"\\|\"", x)) + 2 for x in puzzle.input.splitlines())
     )
 
 

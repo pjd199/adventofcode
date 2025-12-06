@@ -23,10 +23,12 @@ def solve() -> None:
     offsets = [(-1, -1), (0, -1), (1, -1), (-1, 0), (1, 0), (-1, 1), (0, 1), (1, 1)]
 
     # solve part one
-    puzzle.answer_one = sum(
-        1
-        for x, y in locations
-        if sum(1 for dx, dy in offsets if (x + dx, y + dy) in locations) < 4
+    puzzle.submit_answer_one(
+        sum(
+            1
+            for x, y in locations
+            if sum(1 for dx, dy in offsets if (x + dx, y + dy) in locations) < 4
+        )
     )
 
     # solve part two
@@ -41,7 +43,7 @@ def solve() -> None:
         locations -= accessible
         if not accessible:
             break
-    puzzle.answer_two = result
+    puzzle.submit_answer_two(result)
 
 
 if __name__ == "__main__":

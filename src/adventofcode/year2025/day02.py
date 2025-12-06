@@ -17,19 +17,23 @@ def solve() -> None:
     data = puzzle.input
 
     # solve part one
-    puzzle.answer_one = sum(
-        number
-        for first, last in findall(r"(\d+)-(\d+)", data)
-        for number in range(int(first), int(last) + 1)
-        if fullmatch(r"(\d+)\1", str(number))
+    puzzle.submit_answer_one(
+        sum(
+            number
+            for first, last in findall(r"(\d+)-(\d+)", data)
+            for number in range(int(first), int(last) + 1)
+            if fullmatch(r"(\d+)\1", str(number))
+        )
     )
 
     # solve part two
-    puzzle.answer_two = sum(
-        number
-        for first, last in findall(r"(\d+)-(\d+)", data)
-        for number in range(int(first), int(last) + 1)
-        if fullmatch(r"(\d+)\1+", str(number))
+    puzzle.submit_answer_two(
+        sum(
+            number
+            for first, last in findall(r"(\d+)-(\d+)", data)
+            for number in range(int(first), int(last) + 1)
+            if fullmatch(r"(\d+)\1+", str(number))
+        )
     )
 
 

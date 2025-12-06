@@ -56,10 +56,10 @@ def solve() -> None:
 
     # solve part one
     passwords = password_generator(puzzle.input)
-    puzzle.answer_one = next(passwords)
+    puzzle.submit_answer_one(next(passwords))
 
     # solve part two
-    puzzle.answer_two = next(passwords)
+    puzzle.submit_answer_two(next(passwords))
 
 
 if __name__ == "__main__":

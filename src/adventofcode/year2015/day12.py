@@ -28,10 +28,10 @@ def solve() -> None:
     puzzle = Puzzle(12, 2015)
 
     # solve part one
-    puzzle.answer_one = sum(int(x) for x in findall(r"-?\d+", puzzle.input))
+    puzzle.submit_answer_one(sum(int(x) for x in findall(r"-?\d+", puzzle.input)))
 
     # solve part two
-    puzzle.answer_two = count(loads(puzzle.input))
+    puzzle.submit_answer_two(count(loads(puzzle.input)))
 
 
 if __name__ == "__main__":

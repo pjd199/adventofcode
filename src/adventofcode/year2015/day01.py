@@ -14,14 +14,14 @@ def solve() -> None:
     puzzle = Puzzle(1, 2015)
 
     # solve part one
-    puzzle.answer_one = puzzle.input.count("(") - puzzle.input.count(")")
+    puzzle.submit_answer_one(puzzle.input.count("(") - puzzle.input.count(")"))
 
     # solve part two
     floor = 0
     for i, move in enumerate(puzzle.input, 1):
-        floor += 1 if move == "(" else -1   
+        floor += 1 if move == "(" else -1
         if floor < 0:
-            puzzle.answer_two = i
+            puzzle.submit_answer_two(i)
             break
 
 

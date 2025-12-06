@@ -27,10 +27,10 @@ def solve() -> None:
     puzzle = Puzzle(3, 2015)
 
     # solve part one
-    puzzle.answer_one = len(visit(puzzle.input))
+    puzzle.submit_answer_one(len(visit(puzzle.input)))
 
     # solve part two
-    puzzle.answer_two = len(visit(puzzle.input[::2]) | visit(puzzle.input[1::2]))
+    puzzle.submit_answer_two(len(visit(puzzle.input[::2]) | visit(puzzle.input[1::2])))
 
 
 if __name__ == "__main__":

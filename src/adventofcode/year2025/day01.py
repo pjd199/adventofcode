@@ -23,7 +23,7 @@ def solve() -> None:
         dial = (dial + rotation) % 100
         if dial == 0:
             count += 1
-    puzzle.answer_one = count
+    puzzle.submit_answer_one(count)
 
     # # solve part two
     dial = 50
@@ -38,7 +38,7 @@ def solve() -> None:
             if dial > 0 and (dial - rotation) <= 0:
                 count += 1
         dial = (dial + rotation * directions[line[0]]) % 100
-    puzzle.answer_two = count
+    puzzle.submit_answer_two(count)
 
 
 if __name__ == "__main__":

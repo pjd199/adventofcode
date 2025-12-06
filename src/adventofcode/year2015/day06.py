@@ -32,7 +32,7 @@ def solve() -> None:
             case "toggle":
                 region[:] = ~region
 
-    puzzle.answer_one = np.count_nonzero(lights)
+    puzzle.submit_answer_one(np.count_nonzero(lights))
 
     # solve part two
     lights = np.full((1000, 1000), 0)
@@ -50,7 +50,7 @@ def solve() -> None:
             case "toggle":
                 region += 2
 
-    puzzle.answer_two = np.sum(lights)
+    puzzle.submit_answer_two(np.sum(lights))
 
 
 if __name__ == "__main__":

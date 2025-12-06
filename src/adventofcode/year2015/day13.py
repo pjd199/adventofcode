@@ -36,13 +36,13 @@ def solve() -> None:
             )
 
     # solve part one
-    puzzle.answer_one = max(happiness(x, people) for x in permutations(people))
+    puzzle.submit_answer_one(max(happiness(x, people) for x in permutations(people)))
 
     # solve part two
     people |= {"Me": {x: 0 for x in people}}
     for x in people.values():
         x |= {"Me": 0}
-    puzzle.answer_two = max(happiness(x, people) for x in permutations(people))
+    puzzle.submit_answer_two(max(happiness(x, people) for x in permutations(people)))
 
 
 if __name__ == "__main__":

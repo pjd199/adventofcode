@@ -19,8 +19,7 @@ def find(wire: str) -> int:
         return int(wire)
     if instructions[wire].isnumeric():
         return int(instructions[wire])
-    m = fullmatch(
-        r"([a-z0-9]+)? ?([A-Z]+) ?([a-z0-9]+)|([a-z]+)", instructions[wire])
+    m = fullmatch(r"([a-z0-9]+)? ?([A-Z]+) ?([a-z0-9]+)|([a-z]+)", instructions[wire])
     left, gate, right, link = m.groups()
     match gate:
         case "AND":
@@ -46,12 +45,12 @@ def solve() -> None:
         instructions[wire] = ins
 
     # solve part one
-    puzzle.answer_one = find("a")
+    puzzle.submit_answer_one(find("a"))
 
     # solve part two
     find.cache_clear()
     instructions["b"] = puzzle.answer_one
-    puzzle.answer_two = find("a")
+    puzzle.submit_answer_two(find("a"))
 
 
 if __name__ == "__main__":
