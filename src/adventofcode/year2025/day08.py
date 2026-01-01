@@ -25,9 +25,9 @@ def solve() -> None:
     # caculate and sort the direct line distances
     pairs = nsmallest(10000, ((dist(a, b), (a, b)) for a, b in combinations(boxes, 2)))
 
-    # merge the circuits
     circuits = [{box} for box in boxes]
     for i, (_, (a, b)) in enumerate(pairs):
+        # merge two circuits
         left = next(circuit for circuit in circuits if a in circuit)
         right = next(circuit for circuit in circuits if b in circuit)
         if left != right:
