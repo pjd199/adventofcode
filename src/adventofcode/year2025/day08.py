@@ -6,10 +6,9 @@ https://adventofcode.com/2025/day/8
 """
 
 from collections import Counter
-from itertools import combinations
 from heapq import nsmallest
+from itertools import combinations
 from math import dist, prod
-from operator import itemgetter
 
 from adventus import Puzzle
 
@@ -20,10 +19,12 @@ def solve() -> None:
     puzzle = Puzzle(8, 2025)
 
     # parse the input
-    boxes = [tuple(map(int, line.split(","))) for line in puzzle.input.splitlines()]
+    boxes = [tuple(map(int, line.split(",")))
+             for line in puzzle.input.splitlines()]
 
     # caculate and sort the direct line distances
-    pairs = nsmallest(10000, ((dist(a, b), (a, b)) for a, b in combinations(boxes, 2)))
+    pairs = nsmallest(10000, ((dist(a, b), (a, b))
+                      for a, b in combinations(boxes, 2)))
 
     circuits = [{box} for box in boxes]
     for i, (_, (a, b)) in enumerate(pairs):
